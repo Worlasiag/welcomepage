@@ -40,25 +40,26 @@ function setBgGreet(){
 
 if(hour < 12){
     //Morning
-    document.body.style.backgroundImage = "url(img/morning1.jpg)";
+    document.body.style.backgroundImage = "url(img/web.jpg)";
     greeting.textContent = 'Good Morning';
     document.body.style.backgroundRepeat = 'no-repeat';
     document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundPosition = 'center';
 } else if (hour < 18){
     //afternoon
-    document.body.style.backgroundImage = "url(img/forrest.png)";
+    document.body.style.backgroundImage = "url(img/web.png)";
     greeting.textContent = 'Good Afternoon';
     document.body.style.backgroundRepeat = 'no-repeat';
     document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundPosition = 'center';
 } else{
     //evening
-    document.body.style.backgroundImage = "url(img/forrest.png)";
+    document.body.style.backgroundImage = "url(img/web.png)";
     greeting.textContent = 'Good Evening';
     document.body.style.color = '#000';
     document.body.style.backgroundRepeat = 'no-repeat';
     document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundPosition = 'center';
 }
 }
 
@@ -99,13 +100,7 @@ function getName(){
 }
 
 //Get Focus
-function getFocus(){
-    if (localStorage.getItem('focus') === null){
-        focus.textContent = '[ Enter Focus ]';
-    } else {
-        focus.textContent = localStorage.getItem('focus');
-    }
-}
+
 
 name.addEventListener('keypress', setName);
 name.addEventListener('blur', setName);
@@ -137,7 +132,7 @@ focus.addEventListener('blur', setFocus);
 //Run
 showTime();
 setBgGreet();
-getFocus();
+
 getName();
 newQuote();
 
